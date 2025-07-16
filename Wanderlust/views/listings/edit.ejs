@@ -1,0 +1,67 @@
+<%layout("/layouts/boilerplate")%>
+
+    <body>
+        <div class="row mt-4">
+            <div class="col-md-8 offset-2">
+                <h1>Edit listing</h1>
+                <form action="/listings/<%=editlisting._id%>?_method=PUT" method="POST" novalidate
+                    class="needs-validation" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title:</label>
+                        <input class="form-control" type="text" name="listing[title]" value="<%=editlisting.title%>"
+                            required>
+                        <div class="invalid-feedback">
+                            Field should not be empty.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description:</label>
+                        <textarea class="form-control" name="listing[description]" cols="3" rows="3"
+                            required><%=editlisting.description%> </textarea>
+                        <div class="invalid-feedback">
+                            Field should not be empty.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Original Image:</label><br>
+                        <img src="<%= originalImageURL %>" alt="image">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload New Image:</label>
+                        <input type="file" name="listing[image]" class="form-control">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price:</label>
+                            <input class="form-control" type="number" name="listing[price]"
+                                value="<%=editlisting.price%>" required>
+                            <div class="invalid-feedback">
+                                Field should not be empty.
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="location" class="form-label">Location:</label>
+                            <input class="form-control" type="text" name="listing[location]"
+                                placeholder="Enter Location" value="<%=editlisting.location%>" required>
+                            <div class="invalid-feedback">
+                                Field should not be empty.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country:</label>
+                        <input class="form-control" type="text" name="listing[country]" placeholder="country"
+                            value="<%=editlisting.country%>" required>
+                        <div class="invalid-feedback">
+                            Field should not be empty.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-danger btn-edit">SAVE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>

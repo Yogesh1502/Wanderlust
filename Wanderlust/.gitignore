@@ -1,0 +1,49 @@
+# === Node.js ===
+node_modules/
+init/
+
+# === Environment Variables ===
+.env
+
+# === Logs ===
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === OS-specific files ===
+.DS_Store
+Thumbs.db
+
+# === Editor/IDE settings ===
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# === Uploaded / Temp files (if any) ===
+uploads/
+temp/
+tmp/
+cloudinary_uploads/
+
+# === Build & Output folders (if generated) ===
+dist/
+build/
+
+# === MongoDB Dumps / Backups ===
+dump/
+*.bak
+*.gz
+
+# === EJS Temp Files ===
+*.ejs~
+
+# === Optional Lock Files (uncomment one if using only one) ===
+package-lock.json
+
+# === Coverage Reports (if using test coverage) ===
+coverage/
