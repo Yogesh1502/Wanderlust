@@ -4,7 +4,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 const connectDB = require("./connectDB");
 connectDB();
-const initDB = require("./init/index");
 const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-Mate");
