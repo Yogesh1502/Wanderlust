@@ -6,7 +6,7 @@ const connectDB = require("./connectDB");
 connectDB();
 const path = require("path");
 const methodOverride = require("method-override");
-const ejsMate = require("ejs-Mate");
+const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/expressError");
 const listingRouter = require("./routes/listing");
 const reviewRouter = require("./routes/review");
